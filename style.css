@@ -18,3 +18,12 @@ a {
     text-decoration: none;
     color: black;
 }
+
+footer {
+    margin-top: 100%;
+}
+
+.footer-content {
+    
+    color: red;
+}
