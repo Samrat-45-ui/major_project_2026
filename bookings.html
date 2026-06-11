@@ -19,7 +19,24 @@
         </nav>
     </header><hr>
     <main>
+        <section>
+            <h1>Book a Class</h1>
+            <form id="booking-form">
+                <label for="username">Your name</label>
+                <input id="username" name="username" type="text" required>
 
+                <label for="class-select">Choose a class</label>
+                <select id="class-select" name="class_id" required></select>
+
+                <button type="submit">Book now</button>
+                <p id="feedback-banner" aria-live="polite"></p>
+            </form>
+
+            <h2>Available Classes</h2>
+            <ul id="class-container">
+                <li>Loading classes...</li>
+            </ul>
+        </section>
     </main>
     <script src="./script.js"></script><hr>
     <footer>
