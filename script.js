@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+    const apiBaseUrl = window.API_BASE_URL || "";
     const classContainer = document.getElementById("class-container") || document.getElementById("class-list");
     const bookingForm = document.getElementById("booking-form");
     const classSelect = document.getElementById("class-select");
@@ -35,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     if (classContainer) {
-        fetch("/api/classes")
+        fetch(`${apiBaseUrl}/api/classes`)
             .then((response) => response.json())
             .then(showClasses)
             .catch(() => {
@@ -44,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     if (bookingForm && classSelect) {
-        fetch("/api/classes")
+        fetch(`${apiBaseUrl}/api/classes`)
             .then((response) => response.json())
             .then(fillClassOptions);
 
@@ -59,7 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 class_id: Number(classSelect.value)
             };
 
-            fetch("/api/book", {
+            fetch(`${apiBaseUrl}/api/book`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(data)
