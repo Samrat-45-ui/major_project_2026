@@ -80,5 +80,6 @@ body {
     .nav-container { flex-direction: column; gap: 1rem; text-align: center; }
     .nav-link { margin: 0 0.75rem; }
     .hero h1 { font-size: 2rem; }
-    .form-wrapper, .contact-box { padding: 1.5rem; }
+    .form-wrapper, .contact-box { padding: 1.5rem;}
+
 }
